@@ -6,18 +6,19 @@ import java.util.Scanner; // import Scanner Class
 public class IfStatement {
     // User Input
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in); // Create an object of scanner
+        Scanner scanner = new Scanner(System.in); // Create an object of scanner
         System.out.println("* Login In *");
-        String username = "winter";
+        String email = "winter";
         String password = "winter123";
         
-        System.out.print("Enter username: ");
-        String inputtedUsername = sc.nextLine(); // consume user input
+        System.out.print("Enter email: ");
+        String inputtedEmail = scanner.nextLine(); // consume user name
         System.out.print("Enter password: ");
-        String inputtedPassword = sc.nextLine();
-        
-        if (username.equals(inputtedUsername) && password.equals(inputtedPassword)) {
+        String inputtedPassword = scanner.nextLine(); // consume user password
+        // == vs. equals()
+        if (email.equals(inputtedEmail) && password.equals(inputtedPassword)) {
             System.out.println("Logged In Successfully!");
+            // Main Menu / Home
         } else {
             System.out.println("Logged In Failed");
         }
