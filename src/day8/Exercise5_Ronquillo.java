@@ -7,10 +7,8 @@ package day8;
 
 import java.util.Scanner;
 
-/**
- *
- * @author Yuno
- */
+// Code Progression
+// Method of Java
 public class Exercise5_Ronquillo {
     
     public static void main(String[] args) {
@@ -23,34 +21,52 @@ public class Exercise5_Ronquillo {
             return; // return statement is used to terminate a method
         }
         
-        System.out.println("* Load Registration *");
+        // Main Menu
+        //System.out.println(""); // new line 
+        System.out.println("\n\n\n* Load Registration *");
+        
         System.out.println("    [1] Unli Text");
         System.out.println("    [2] Unli Call");
         System.out.println("    [3] Unli Call N Text");
-        int choice = scanner.nextInt();
+        System.out.print("Enter choice: ");
+        int mainMenuChoice = scanner.nextInt();
         
-        switch(choice) {
+        switch(mainMenuChoice) {
             case 1:
-                // 3 days + 500mb
-                // 5 days + 1gb
-                // 7 days + 2gb
-                choice = scanner.nextInt();
-                switch(choice) {
+                // Sub-Menu for Unli Text
+                System.out.println("\n\n\n *** Enjoy Unli Text ***");
+                System.out.println("    [1] 1 Day for P10");
+                System.out.println("    [2] 3 Days for P30");
+                System.out.println("    [3] 5 Days for P50");
+                System.out.print("Enter choice: ");
+                int subMenuChoice = scanner.nextInt();
+                switch(subMenuChoice) {
                     case 1:
-                        // 3 days + 500mb
+                        System.out.println("\n\n\n-> Get Unli Text good for 1 Day for only P10");
+                        System.out.println("    [1] Subscribe");
+                        System.out.println("    [2] Back");
+                        System.out.println("    [3] Exit");
+                        System.out.print("Enter choice: ");
+                        int confirmationChoice = scanner.nextInt();
+                        
+                        if (confirmationChoice == 1) {
+                            System.out.println("\n\n\nCongratulations you are subscribe to Unli Text for 1 Day.");
+                            
+                        } else if (confirmationChoice == 2){
+                            // back
+                        } else {
+                            System.out.println("Thank You!");
+                            return;
+                        }
+                        
                         break;
-                        // // confirmation
-                        // 1 subscribe
-                        // 2 cancel
-                        // 3 exit
-//                        choice = scanner.nextInt();
-//                        if (true) {
-//                            
-//                        } else {
-//                        }
+
                     case 2:
-                        // 5 days + 1gb
-                        break;
+                        // Sub-Menu for Unli Call
+                        System.out.println("    [1] 1 Day for P30");
+                        System.out.println("    [2] 3 Days for P50");
+                        System.out.println("    [3] 5 Days for P70");
+                            break;
                         
                 }
                 // block of code for unli text
