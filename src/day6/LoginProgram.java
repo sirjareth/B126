@@ -3,25 +3,34 @@ package day6;
 
 import java.util.Scanner; // import Scanner Class
 
-public class IfStatement {
+public class LoginProgram {
     // User Input
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Create an object of scanner
         System.out.println("* Login In *");
-        String email = "winter";
+        String email = "winter@gmail.com";
         String password = "winter123";
         
-        System.out.print("Enter email: ");
-        String inputtedEmail = scanner.nextLine(); // consume user name
-        System.out.print("Enter password: ");
-        String inputtedPassword = scanner.nextLine(); // consume user password
-        // == vs. equals()
-        if (email.equals(inputtedEmail) && password.equals(inputtedPassword)) {
-            System.out.println("Logged In Successfully!");
-            // Main Menu / Home
-        } else {
-            System.out.println("Logged In Failed");
+        boolean isLoggedIn = false;
+        while(!isLoggedIn){
+            System.out.print("\n\nEnter email: ");
+            String inputtedEmail = scanner.nextLine(); // consume user name
+            System.out.print("Enter password: ");
+            String inputtedPassword = scanner.nextLine(); // consume user password
+
+            if (email.equals(inputtedEmail) && password.equals(inputtedPassword)) {
+                System.out.println("Logged In Successfully!");
+                // Main Menu / Home
+                isLoggedIn = true;
+            } else {
+                System.out.println("Logged In Failed");
+            }
         }
+        
+        scanner.close(); // close the scanner
+        
+        
+        // For Loop / While Loop / Do While Loop
     }
 }
 

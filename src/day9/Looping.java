@@ -12,19 +12,25 @@ public class Looping {
         
         // syntax
         // For Loop
-//        for (int i = 0; i < 10; i++) {
-//            System.out.println(i);
-//        }
+        for (int i = 0; i < 10; i++) {
+            System.out.println(i);
+        }
         
         // While Loop
         // Infinite Loop
-//        int i = 1;
-//        while(i > -5) {
-//            System.out.println(i);
-//            i++;
-//        }
+        int i = 1;
+        while(i > -5) {
+            System.out.println(i);
+            i++;
+        }
 
         // Flag
+//        boolean isRunning = false;
+//        while(false) {
+//            
+//        }
+        
+        
         String color = "black";
 
         while (color.equals("white")) {
