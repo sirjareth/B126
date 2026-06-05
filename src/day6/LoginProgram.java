@@ -14,9 +14,14 @@ public class LoginProgram {
         boolean isLoggedIn = false;
         while(!isLoggedIn){
             System.out.print("\n\nEnter email: ");
-            String inputtedEmail = scanner.nextLine(); // consume user name
+            String inputtedEmail = scanner.nextLine().trim(); // consume user name
             System.out.print("Enter password: ");
-            String inputtedPassword = scanner.nextLine(); // consume user password
+            String inputtedPassword = scanner.nextLine().trim(); // consume user password
+            
+            // Eary Exit
+            if (inputtedEmail.isEmpty() || inputtedPassword.isEmpty()) {
+                return; // exit
+            }
             
             if (email.equals(inputtedEmail) && password.equals(inputtedPassword)) {
                 System.out.println("Logged In Successfully!");
