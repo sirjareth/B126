@@ -17,7 +17,7 @@ public class LoginProgram {
             String inputtedEmail = scanner.nextLine(); // consume user name
             System.out.print("Enter password: ");
             String inputtedPassword = scanner.nextLine(); // consume user password
-
+            
             if (email.equals(inputtedEmail) && password.equals(inputtedPassword)) {
                 System.out.println("Logged In Successfully!");
                 // Main Menu / Home
