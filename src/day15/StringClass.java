@@ -8,14 +8,74 @@ public class StringClass {
     
     public static void main(String[] args) {
         
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Deleting an account....");
-        System.out.print("Type Y to proceed: ");
-        char choice = scanner.nextLine().charAt(0);
+        // Casting
         
-        if (choice == 'Y' || choice == 'y') {
-            System.out.println("Account Deleted.");
-        }
+        // Number Class
+        // upcasting
+        // downcasting
+        
+        int num = 50;
+        
+        double newNum = num; // upcasting
+        System.out.println(newNum);
+        
+        
+        float temp = 39.9f;
+        
+        int newTemp = (int) temp; // downcasting
+        System.out.println(newTemp);
+        
+        // double average = (double) sum / length;
+        // byte hosrt int long float double
+        // Parsing -> converts String to primitive data type or vice versa
+        // valueOf()
+//        int id = 1012026;
+//
+//        String newNum = String.valueOf(id);
+//        String newId = newNum + "B126";
+//        System.out.println(newId);
+        
+        
+//        String num = "127";
+//        
+//        byte newNum = Byte.parseByte(num);
+//        System.out.println(newNum);
+        
+        // replace()
+//        String hero = "Superman";
+//
+//        char[] heroArray = hero.toCharArray();
+//        
+////        for (int i = 0; i < heroArray.length; i++) {
+////            System.out.print(heroArray[i]);
+////        }
+//
+//
+//        for (int i = heroArray.length -1; i >= 0; i--) {
+//            System.out.print(heroArray[i]);
+//        }
+//        System.out.println("");
+        
+        
+//        String hero = "Superman";
+//        String newHero = "Batman";
+//        
+//        System.out.println(hero.replace(hero, newHero));   
+        
+        
+        
+        
+        
+        
+        
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Deleting an account....");
+//        System.out.print("Type Y to proceed: ");
+//        char choice = scanner.nextLine().trim().charAt(0);
+//        
+//        if (choice == 'Y' || choice == 'y') {
+//            System.out.println("Account Deleted.");
+//        }
         
         
         
