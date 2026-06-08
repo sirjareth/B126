@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 // Code Progression
 // Method of Java
+// SOC -> Seperation of Concenrs
 public class Exercise5_Ronquillo {
     
     public static void main(String[] args) {
@@ -76,5 +77,8 @@ public class Exercise5_Ronquillo {
                 break;
         }
     }
+    
+    
+    
 }
 //
