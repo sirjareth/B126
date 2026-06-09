@@ -8,6 +8,14 @@ public class StringClass {
     
     public static void main(String[] args) {
         
+        String word = "Hello";
+        
+        char[] arrayOfWords = word.toCharArray();
+        
+        for (int i = arrayOfWords.length -1; i > 0; i--) {
+            System.out.print(arrayOfWords[i]);
+        }
+        
         // Casting
         
         // Number Class

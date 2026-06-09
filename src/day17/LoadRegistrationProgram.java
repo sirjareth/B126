@@ -16,7 +16,7 @@ public class LoadRegistrationProgram {
         System.out.print("Enter USSD Code: ");
         String ussdCode = scanner.nextLine();
 
-        if (!ussdCode.equals("*143#")) {
+        if (ussdCode.isEmpty() || !ussdCode.equals("*143#")) {
             return; // return statement is used to terminate a method
         }
     }
@@ -44,6 +44,7 @@ public class LoadRegistrationProgram {
         System.out.println("    [1] 1 Day for P10");
         System.out.println("    [2] 3 Days for P30");
         System.out.println("    [3] 5 Days for P50");
+        System.out.println("    [4] Back");
         System.out.print("Enter choice: ");
         int subMenuChoice = scanner.nextInt();
 
@@ -52,6 +53,9 @@ public class LoadRegistrationProgram {
                  subscriptionConfirmation("Unli Text Promo", 1, 10);
             case 2:
                 // subscriptionConfirmation()
+            case 4:
+                mainMenu();
+                break;
         }
     }
     
@@ -65,12 +69,12 @@ public class LoadRegistrationProgram {
 
         switch (subMenuChoice) {
             case 1:
-                // subscriptionConfirmation()
+                // subscriptionConfirmation("Unli Call")
             case 2:
                 // subscriptionConfirmation()
         }
     }
-
+    
     public static void subscriptionConfirmation(String promo, int days, int price) {
         System.out.println("\n\n\n-> Get " + promo + " good for " +  days + " Day/s for only P" + price);
         System.out.println("    [1] Subscribe");
@@ -83,11 +87,34 @@ public class LoadRegistrationProgram {
             System.out.println("\n\n\nCongratulations you are subscribe to " + promo + " for " + days + " Day/days.");
 
         } else if (confirmationChoice == 2) {
-            //
+            switch(promo) {
+                case "Unli Text":
+                    unliTextPromo();
+                case "Unli Call":
+                    unliCallPromo();
+            }
         } else {
             exitConfirmation();
         }
     }
+
+//    public static void subscriptionConfirmationForGoSurf(String promo, int days, int price) {
+//        System.out.println("\n\n\n-> Get " + promo + " good for " +  days + " Day/s for only P" + price);
+//        System.out.println("    [1] Subscribe");
+//        System.out.println("    [2] Back");
+//        System.out.println("    [3] Exit");
+//        System.out.print("Enter choice: ");
+//        int confirmationChoice = scanner.nextInt();
+//
+//        if (confirmationChoice == 1) {
+//            System.out.println("\n\n\nCongratulations you are subscribe to " + promo + " for " + days + " Day/days.");
+//
+//        } else if (confirmationChoice == 2) {
+//            //
+//        } else {
+//            exitConfirmation();
+//        }
+//    }
     
     public static void exitConfirmation() {
         
@@ -104,3 +131,9 @@ public class LoadRegistrationProgram {
     }
 
 }
+
+/*
+    return  -> exit method
+    break   ->  exit loop/switch
+    System.exit() -> exit system
+*/
