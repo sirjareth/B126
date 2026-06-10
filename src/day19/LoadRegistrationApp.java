@@ -1,24 +1,26 @@
-
 package day19;
 
 /* Input Mismatch Exception
     balance
     looping
     exceptions handling
-*/
+ */
 import java.util.Scanner;
 
 public class LoadRegistrationApp {
 
     static Scanner scanner = new Scanner(System.in);
     static double loadBalance = 100.0; // initial balance
-    
+
     public static void main(String[] args) {
+        clearScreen();
         validateUssdCode();
-        
-        while(true) {
+
+        while (true) {
             try {
+                clearScreen();
                 mainMenu();
+                
             } catch (Exception e) {
                 System.out.println("Invalid Input! Please enter a number");
                 scanner.nextLine(); // clear buffer
@@ -33,15 +35,14 @@ public class LoadRegistrationApp {
 
         if (ussdCode.isEmpty() || !ussdCode.equals("*143#")) {
             System.out.println("Invalid USSD Code. Exiting...");
-            System.exit(0); 
+            System.exit(0);
         }
-        
-        
+
     }
 
     public static void mainMenu() {
-        System.out.println("\n\n\n* Load Registration *");
-
+        //System.out.println("\n\n\n* Load Registration *");
+        System.out.println("* Load Registration *");
         System.out.println("    [1] Unli Text");
         System.out.println("    [2] Unli Call");
         System.out.println("    [3] Unli Call N Text");
@@ -65,14 +66,16 @@ public class LoadRegistrationApp {
                 break;
             case 5:
                 exitConfirmation();
-            default: 
+            default:
                 System.out.println("Invalid Choice!");
 
         }
     }
 
     public static void unliTextPromo() {
-        System.out.println("\n\n\n *** Enjoy Unli Text ***");
+        //System.out.println("\n\n\n *** Enjoy Unli Text ***");
+        clearScreen();
+        System.out.println("*** Enjoy Unli Text ***");
         System.out.println("    [1] 1 Day for P10");
         System.out.println("    [2] 3 Days for P30");
         System.out.println("    [3] 5 Days for P50");
@@ -82,24 +85,26 @@ public class LoadRegistrationApp {
 
         switch (subMenuChoice) {
             case 1:
-                 subscriptionConfirmation("Unli Text Promo", 1, 10);
-                 break;
+                subscriptionConfirmation("Unli Text Promo", 1, 10);
+                break;
             case 2:
-                 subscriptionConfirmation("Unli Text Promo", 3, 30);
-                 break;
+                subscriptionConfirmation("Unli Text Promo", 3, 30);
+                break;
             case 3:
-                 subscriptionConfirmation("Unli Text Promo", 3, 30);
-                 break;
+                subscriptionConfirmation("Unli Text Promo", 3, 30);
+                break;
             case 4:
                 return;
             default:
                 System.out.println("Invalid Choice!");
-               
+
         }
     }
-    
+
     public static void unliCallPromo() {
-        System.out.println("\n\n\n *** Enjoy Unli Call ***");
+        clearScreen();
+        //System.out.println("\n\n\n *** Enjoy Unli Call ***");
+        System.out.println("*** Enjoy Unli Call ***");
         System.out.println("    [1] 1 Day for P20");
         System.out.println("    [2] 3 Days for P50");
         System.out.println("    [3] 5 Days for P70");
@@ -119,13 +124,14 @@ public class LoadRegistrationApp {
                 break;
             case 4:
                 return;
-            default: 
+            default:
                 System.out.println("Invalid Choice!");
         }
     }
-    
+
     public static void unliCallNTextPromo() {
-        System.out.println("\n\n\n *** Enjoy Unli Call N Text ***");
+        //System.out.println("\n\n\n *** Enjoy Unli Call N Text ***");
+        System.out.println("*** Enjoy Unli Call N Text ***");
         System.out.println("    [1] 3 Days for P50");
         System.out.println("    [2] 5 Days for P70");
         System.out.println("    [3] 7 Days for P100");
@@ -145,20 +151,20 @@ public class LoadRegistrationApp {
                 break;
             case 4:
                 return;
-            default: 
+            default:
                 System.out.println("Invalid Choice!");
         }
     }
-    
+
     public static void subscriptionConfirmation(String promo, int days, int price) {
-        System.out.println("\n\n\n-> Get " + promo + " good for " +  days + " Day/s for only P" + price);
+        clearScreen();
+        System.out.println("-> Get " + promo + " good for " + days + " Day/s for only P" + price);
+        //System.out.println("\n\n\n-> Get " + promo + " good for " + days + " Day/s for only P" + price);
         System.out.println("    [1] Subscribe");
         System.out.println("    [2] Back");
         System.out.println("    [3] Exit");
         System.out.print("Enter choice: ");
         int confirmationChoice = scanner.nextInt();
-        
-        
 
         if (confirmationChoice == 1) {
             if (loadBalance >= price) {
@@ -167,31 +173,35 @@ public class LoadRegistrationApp {
             } else {
                 System.out.println("Insufficient Balance! Please reload.");
             }
-            
+
         } else if (confirmationChoice == 2) {
             return;
         } else {
             exitConfirmation();
         }
     }
-    
+
     public static void checkBalance() {
+        
         System.out.println("\n\n\nYour current load balance is: P" + loadBalance);
     }
-    
+
     public static void exitConfirmation() {
         scanner.nextLine();
         System.out.println("\n\n\nAre you sure you really want to exit? ");
         System.out.print("Type Y to proceed: ");
         char choice = scanner.nextLine().trim().charAt(0);
-        
+
         if (choice == 'Y' || choice == 'y') {
             System.out.println("Exiting.....");
             System.exit(0);
-        } 
+        }
     }
 
-    
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
+    }
 
 }
 
@@ -199,4 +209,12 @@ public class LoadRegistrationApp {
     return  -> exit method
     break   ->  exit loop/switch
     System.exit() -> exit system
+ */
+
+
+/*
+    How to run Java Program in terminal
+Steps:
+    1. Check Java Installation
+    2. Navigate to project folder 
 */
