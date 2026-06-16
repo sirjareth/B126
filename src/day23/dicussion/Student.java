@@ -17,6 +17,7 @@ public class Student {
     private String course;
     private String contactNumber;
     private boolean isNewStudent;
+    private String schoolName;
     
     // setter constructor
     public Student(int id, String name, int gradeLevel, 
