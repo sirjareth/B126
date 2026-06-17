@@ -1,0 +1,15 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package day24.discussion;
+
+
+public class JavaDeveloper extends Developer{
+    
+    public JavaDeveloper(int id, String name, double salary) {
+        super(id, name, salary);
+    }
+    
+}

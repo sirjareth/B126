@@ -11,52 +11,73 @@ package day23.dicussion;
 */
 public class Student {
     
-    private int id; // 1
-    private String name; // Manuel Pogi
-    private int gradeLevel;
-    private String course;
-    private String contactNumber;
-    private boolean isNewStudent;
-    private String schoolName;
+     private int id; // 1
+     private String name; // Manuel Pogi
+     private int gradeLevel;
+     private String course;
+     private String contactNumber;
+     private boolean isNewStudent;
+     String schoolName;
     
-    // setter constructor
-    public Student(int id, String name, int gradeLevel, 
-            String course, String contactNumber, boolean isNewStudent) {
+    
+    // alt + insert
+
+    public Student(int id, String name, int gradeLevel, String course, String contactNumber, boolean isNewStudent, String schoolName) {
         this.id = id;
         this.name = name;
         this.gradeLevel = gradeLevel;
         this.course = course;
         this.contactNumber = contactNumber;
         this.isNewStudent = isNewStudent;
+        this.schoolName = schoolName;
     }
-    
 
-    
-    // accessor / getter method
     public int getId() {
         return id;
     }
-    
-    // mutator / setter method
-    public void setId (int id) {
-        // member = param
+
+    public void setId(int id) {
         this.id = id;
     }
-    
+
     public String getName() {
         return name;
     }
-    
+
     public void setName(String name) {
         this.name = name;
     }
-    
-    public int getGradeLevel () {
+
+    public int getGradeLevel() {
         return gradeLevel;
     }
-    
-    public void setGradeLevel (int gradeLevel) {
+
+    public void setGradeLevel(int gradeLevel) {
         this.gradeLevel = gradeLevel;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public String getContactNumber() {
+        return contactNumber;
+    }
+
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
+    }
+
+    public boolean isIsNewStudent() {
+        return isNewStudent;
+    }
+
+    public void setIsNewStudent(boolean isNewStudent) {
+        this.isNewStudent = isNewStudent;
     }
     
     

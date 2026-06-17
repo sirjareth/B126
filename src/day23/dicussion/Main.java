@@ -11,7 +11,7 @@ public class Main {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        Student stud = new Student(1, "Winter Sum", 13, "BSIT", "0954564654", false);
+        //Student stud = new Student(1, "Winter Sum", 13, "BSIT", "0954564654", false);
         
         
         //System.out.println("* Student Profile *");
