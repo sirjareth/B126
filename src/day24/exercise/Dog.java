@@ -8,7 +8,4 @@ package day24.exercise;
 import day24.discussion.Animal;
 
 
-public class Dog extends Animal{
-    
-    
-}
+public class Dog extends Animal {}

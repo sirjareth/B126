@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day24.discussion;
+package day25.discussion;
 
-// SRP -> Single Responsibility Principle 
-// Super Class / Parent Class / Base Class
-
-public class Animal {}
+// Multilevel Inheritance
+public class Puppy extends Dog{
+    
+}

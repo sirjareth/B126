@@ -7,7 +7,4 @@ package day24.discussion;
 
 // Child / Sub / Derived / Extended Class
 // syntax
-public class Cat extends Animal {
-    
-    
-}
+public class Cat extends Animal {}

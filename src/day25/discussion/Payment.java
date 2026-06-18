@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day24.discussion;
+package day25.discussion;
 
-// SRP -> Single Responsibility Principle 
-// Super Class / Parent Class / Base Class
 
-public class Animal {}
+public class Payment {
+    
+    public void pay(double amount) {
+        System.out.println("Processing generic payment of amount " + amount);
+    }
+}

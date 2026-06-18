@@ -3,9 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package day24.discussion;
+package day24.exercise;
 
-// SRP -> Single Responsibility Principle 
-// Super Class / Parent Class / Base Class
+/**
+ *
+ * @author Yuno
+ */
 
-public class Animal {}
+
+public class Puppy extends Dog{}
