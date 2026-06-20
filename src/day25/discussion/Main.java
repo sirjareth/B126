@@ -13,6 +13,7 @@ public class Main {
     
     public static void main(String[] args) {
         
+        
         Payment p1 = new CreditCardPayment();
         Payment p2 = new PaypalPayment();
         Payment p3 = new GCashPayment();
